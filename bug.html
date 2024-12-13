@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    // Incorrectly attempting to access a non-existent property
+    document.getElementById('myDiv').nonExistentProperty = "some value";
+    // Although this doesn't immediately cause a visible error in the browser, 
+    // it could lead to unexpected behavior or errors later in the code
+    // especially if that property is expected to exist later.
+  </script>
+</body>
+</html>
